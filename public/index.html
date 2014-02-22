@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<head>
+  <script src="js/angular.js"></script>
+  <script src="js/angular-route.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/services/services.js"></script>
+  <script src="js/matrixUtil/src/matrixUtil.js"></script>
+  <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet"> -->
+<!--   <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" type="text/css" rel="stylesheet"> -->
+  <!-- <link rel="shortcut icon" href="/bootstrap/img/favicon.ico"> -->
+  <link href="css/style.css" type="text/css" rel="stylesheet">
+<!--   // <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+<!--   // <script type='text/javascript' src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script> -->
+</head>
+
+<body ng-app="flintify">
+    <div id='origin' ng-controller="homeCtrl">
+      <div id="front" class="face">
+        <table>
+          <tr>
+            <td>
+              <!-- top -->
+              <div class="headerBar" ng-click="up($event)">top</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+             <!-- left side -->
+             <div class="leftBar" ng-click="left($event)">left</div>
+            </td>
+
+            <td>
+              <!-- content -->
+              <div class="content">
+                <div ng-view></div>
+              </div>
+            </td>
+            <td>
+              <!-- right side -->
+              <div class="rightBar" ng-click="right($event)">right</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <!-- bottom -->
+              <div class="footerBar" ng-click="down($event)">bottom</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="right" class="face">
+        <table>
+          <tr>
+            <td>
+              <!-- top -->
+              <div class="headerBar" ng-click="up($event)">top</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+             <!-- left side -->
+             <div class="leftBar" ng-click="left($event)">left</div>
+            </td>
+
+            <td>
+              <!-- content -->
+              <div class="content">
+                <div ng-view></div>
+              </div>
+            </td>
+            <td>
+              <!-- right side -->
+              <div class="rightBar" ng-click="right($event)">right</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <!-- bottom -->
+              <div class="footerBar" ng-click="down($event)">bottom</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="left" class="face">
+        <table>
+          <tr>
+            <td>
+              <!-- top -->
+              <div class="headerBar" ng-click="up($event)">top</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+             <!-- left side -->
+             <div class="leftBar" ng-click="left($event)">left</div>
+            </td>
+
+            <td>
+              <!-- content -->
+              <div class="content">
+                <div ng-view></div>
+              </div>
+            </td>
+            <td>
+              <!-- right side -->
+              <div class="rightBar" ng-click="right($event)">right</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <!-- bottom -->
+              <div class="footerBar" ng-click="down($event)">bottom</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="back" class="face">
+        <table>
+          <tr>
+            <td>
+              <!-- top -->
+              <div class="headerBar" ng-click="up($event)">top</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+             <!-- left side -->
+             <div class="leftBar" ng-click="left($event)">left</div>
+            </td>
+
+            <td>
+              <!-- content -->
+              <div class="content">
+                <div ng-view></div>
+              </div>
+            </td>
+            <td>
+              <!-- right side -->
+              <div class="rightBar" ng-click="right($event)">right</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <!-- bottom -->
+              <div class="footerBar" ng-click="down($event)">bottom</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="top" class="face">
+        <table>
+          <tr>
+            <td>
+              <!-- top -->
+              <div class="headerBar" ng-click="up($event)">top</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+             <!-- left side -->
+             <div class="leftBar" ng-click="left($event)">left</div>
+            </td>
+
+            <td>
+              <!-- content -->
+              <div class="content">
+                <div ng-view></div>
+              </div>
+            </td>
+            <td>
+              <!-- right side -->
+              <div class="rightBar" ng-click="right($event)">right</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <!-- bottom -->
+              <div class="footerBar" ng-click="down($event)">bottom</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="bottom" class="face">
+        <table>
+          <tr>
+            <td>
+              <!-- top -->
+              <div class="headerBar" ng-click="up($event)">top</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+             <!-- left side -->
+             <div class="leftBar" ng-click="left($event)">left</div>
+            </td>
+
+            <td>
+              <!-- content -->
+              <div class="content">
+                <div ng-view></div>
+              </div>
+            </td>
+            <td>
+              <!-- right side -->
+              <div class="rightBar" ng-click="right($event)">right</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <!-- bottom -->
+              <div class="footerBar" ng-click="down($event)">bottom</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+    </div>
+
+</body>
